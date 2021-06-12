@@ -30,6 +30,16 @@ or,
 ```bash
 gcc file file.c && ./file #to run
 ```
+### How to auto root in kali 2021
+___Method 1___
+```bash
+dpkg-reconfigure kali-grant-root
+nano /home/painkiller/.bashrc
+```
+now add this command in the last line
+```bash
+sudo su
+```
 
 ## How to download facebook video
 > Doesn't work anymore
