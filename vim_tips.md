@@ -14,4 +14,9 @@ vi -p file1 file2
 3. ```?<keyword>``` for backward search
 
 ## execute a shell command while your are in VIM session
-1. file should be open with 
+1. file should be open with vim
+2. ":!" + shell command
+
+___to insert the result of the shell command___
+* ":r!" + shell command
+
