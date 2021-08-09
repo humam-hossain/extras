@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Gym</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <header>
+         <div>
+            <h3>Saimon Fitness</h3>
+         </div>
+         <div>
+            <ul>
+               <li><a href="">Home</a></li>
+               <li><a href="">About Us</a></li>
+               <li><a href="">Fitness Calendar</a></li>
+               <li><a href="">Contact Us</a></li>
+            </ul>
+         </div>
+         <div>
+            <ul>
+               <li> <button><a href="">Call Us Now</a></button> </li>
+               <li><button><a href="">Email Us</a></button></li>
+            </ul>
+         </div>
+      </header>
+      <section>
+         <h1>Join the best gym in Dhaka now</h1>
+         <form action="" method="">
+            <input type="text" placeholder="Enter your name"> <br>
+            <!-- input type="text" placeholder="Enter your age" -->
+                                <input type="number" placeholder="Enter your age">
+<br>
+				<!-- input type="text" placeholder="Enter your gender" --                    <input type="radio" name="gender" value="male">
+            <input type="radio" name="gender" value="female">           
+            <input type="text" placeholder="Enter your location"><br>
+            <button type="submit">Submit</button>
+         </form>
+      </section>
+   </body>
+</html>
+
