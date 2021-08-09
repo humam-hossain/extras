@@ -1,0 +1,46 @@
+body {
+	background-image: url(body.jpeg);
+	color: white;
+}
+
+header {
+	display: flex;
+	font-size: large;
+	font-weight: bolder;
+	justify-content: space-between;
+}
+
+ul {
+	display: flex;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	margin: 10px;
+	color: white;
+}
+
+button {
+	background-color: black;
+	padding: 10px;
+	margin: 5px;
+}
+
+section {
+	border: 2px solid white;
+	border-radius: 20px;
+	width: 500px;
+	text-align: center;
+	color: white;
+}
+
+section input {
+	margin: 5px;
+	width: 400px;
+	text-align: center;
+}
+
+section button {
+	color: white;
+}
