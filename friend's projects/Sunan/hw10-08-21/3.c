@@ -6,13 +6,13 @@
 int main()
 {
     int n, i;
-    float sum = 0, temp;
+    float sum = 0, temp;    // temp is used for type casting
 
     scanf("%d", &n);
 
     for(i = 1; i<=n; i++){
-        temp = i*i;
-        sum += 1/temp;
+        temp = i*i;     // i*i returns integer result. but as it is assign to a float type variable temp, the result will be stored as float. ex. 4.00000 
+        sum += 1/temp;  // sum = sum + 1/temp; temp = i*i; so sum = sum + 1/i*i
     }
 
     printf("Result: %f", sum);
