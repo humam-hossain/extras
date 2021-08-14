@@ -1,3 +1,5 @@
+// 5) Write a C program that checks whether a number is positive or negativeor zeroand print outs the appropriate message.
+
 #include<stdio.h>
 
 int main()

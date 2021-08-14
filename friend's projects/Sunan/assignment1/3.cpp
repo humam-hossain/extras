@@ -1,3 +1,6 @@
+// 3)Write a C program that 
+// takes as input 3 integers from the user and then computes the maximum number.
+
 #include <stdio.h>
 
 int main()

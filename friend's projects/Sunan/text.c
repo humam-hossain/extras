@@ -7,29 +7,28 @@ void main()
     int a, b, c;
 
     // read those integers
-    scanf("%d %d %d", &a, &b, &c); // a=5, b=6, c=7
+    scanf("%d %d %d", &a, &b, &c); // a=5, b=8, c=1
 
-    // find the maximum integers through if else statements
-    // a>b true
-    // b>a
+    // find the maximum number
 
-    if(a > b){ // 1 > 100
-        // a > b
-        if(a > c){
-            // (a > b) > c
-            printf("max: %a", a);
-        }else{
-            // a > b kintu a < c // c > (a > b)
-            printf("max: %a", c);
-        }
-    }else{
-        // b > a
-        if(b > c){ // 100 >= 100
-            // b > c > a
-            printf("max: %d", b); // 100
-        }else{
-            // c > b > a
-            printf("max: %d", c); // 100
-        }
-    }
+    // a > b && a > c, max =a
+    // && = and operation condition1 && condition2
+    // || = or operation    condition1 || condition2
+    // ! = not  !condition 
+
+    /**
+     * boolean algebra
+     * a && b =
+     * a || b =
+     * 
+     * **/
+
+    if(a>b && a>c){ // 5 > 8 && 5 > 1
+        printf("max: %d", a);
+    }else if(b>a && b>c){ // 8>5 && 8 > 1
+        printf("max: %d", b);
+    }else if(c>a && c>b){
+        printf("max: %d", c);
+    } 
+
 }
