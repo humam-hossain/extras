@@ -84,3 +84,10 @@ nano /etc/pam.d/lightdm-autologin
 * brackets - emmet(for html,css)
 * google chrome extension - postman
 * vidual studio code - material icon theme
+
+## Activate Bangla font in Kali
+
+**Tutorial**: https://www.youtube.com/watch?v=kfwPDzZFvcU
+**Bangla Fonts** : https://www.omicronlab.com/bangla-fonts.html
+
+
