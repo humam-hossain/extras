@@ -8,6 +8,7 @@ int main()
     int i, n;
     float arr[1000], average, sum=0;
 
+    printf("n=");
     scanf("%d", &n);
 
     for(i=0; i<n; i++){
