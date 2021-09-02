@@ -1,5 +1,3 @@
-// 1) Write the output of the following program:
-
 #include <stdio.h>
 #include<string.h>
 
