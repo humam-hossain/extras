@@ -19,3 +19,8 @@ int main() {
     printf("%s", s5);
     return 0;
 }
+
+/**
+ * Output:
+ * A Journey of a Thousand Miles Must begin with a Single Step.
+ * **/
