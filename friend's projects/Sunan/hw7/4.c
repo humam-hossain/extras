@@ -8,7 +8,7 @@ int main()
     int i;
     char str[1000];
 
-    gets(&str);
+    scanf("%[^\n]s",&str);
 
     for(i=0; i < strlen(str); i++){
         if(str[i] == 'a' || str[i] == 'A' || str[i] == 'e' || str[i] == 'E' || str[i] == 'i' || str[i] == 'I' || str[i] == 'o' || str[i] == 'O' || str[i] == 'u' || str[i] == 'U'){
