@@ -23,7 +23,7 @@
 # Function Call 1:
 # function_name('Python is easy', [3, 5], ['@', '*', '+'])
 # Sample Output1:
-# yth@ +* ea*y
+# *yth@* +* ea*y
 # Explanation1:
 # The ASCII value of ‘i’ is 105. It is divisible by both 3 and 5,  so it is 
 # replaced by ‘+’. The ASCII value of ‘i’ is 111. It is divisible by only 3, 
