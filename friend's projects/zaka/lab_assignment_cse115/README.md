@@ -1,4 +1,8 @@
 # Notes
+## Problem_3.c
+
+* I used ```gets()``` in ```student_info()``` function which can through warnings. Let me know.
+* **You must run Problem_3.c and Provide 3 or more entries. Last entry should be your Name, ID, Course, Section. These information will be stored in my_file.txt**
 
 ## Problem_5.c
 
@@ -42,8 +46,3 @@ Now take an integer input ‘n’ from the user and print the sequence upto ‘n
 // Output
 3 1 3 7 11 21 39 71 131 241 443 815 1499 2757 5071 9327 17155
 ```
-
-## Problem_3.c
-
-* I used ```gets()``` in ```student_info()``` function which can through warnings. Let me know.
-* **You must run Problem_3.c. Give 3 or more entries. Last entry should be your Name, ID, Course, Section.**
