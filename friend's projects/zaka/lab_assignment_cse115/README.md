@@ -16,7 +16,7 @@ Now take an integer input ‘n’ from the user and print the sequence upto ‘n
 ---
 
 * The sequence doesn't match with initial values, **T0=0, T1=1, T2=0**
-* Rather The sequance can be found with initial values, **T0=3, T1=1, T2=3**
+* Rather The sequence can be found with initial values, **T0=3, T1=1, T2=3**
 
 > Important Note: Lookup MID-1 Problem 4. Same problem but accurate inital values.
 
