@@ -5,8 +5,9 @@ int sum =0; // sum of total candies eaten
 int max(int *arr, int n)
 {
     //--Enter your code here--
+    int max = 0;
 
-
+    for()
 
     //------------------------
     return max;
@@ -31,7 +32,7 @@ int main()
 
     //--------------------------Enter Your codes here----------------------------------
 
-
+    max(candies, N);
 
 
 
