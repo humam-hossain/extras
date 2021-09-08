@@ -5,10 +5,18 @@ int sum =0; // sum of total candies eaten
 int max(int *arr, int n)
 {
     //--Enter your code here--
-    int max = 0;
+    float max=arr[0];
+    int max_i = 0;
 
-    for()
+    for(int i=0; i<n; i++){
+        if(arr[i] > max){
+            max = arr[i];
+            max_i = i;
+        } 
+    }
 
+    arr[max_i] = arr[max_i]/2;
+    
     //------------------------
     return max;
 }
@@ -32,13 +40,9 @@ int main()
 
     //--------------------------Enter Your codes here----------------------------------
 
-    max(candies, N);
-
-
-
-
-
-
+    for(int i=0; i<K; i++){
+        sum = sum + max(candies, N);
+    }
 
     //---------------------------------------------------------------------------------
     printf("\nMaximum number of candies that can be eaten in %d minutes is %d\n", K,sum);
