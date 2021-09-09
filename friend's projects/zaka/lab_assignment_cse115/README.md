@@ -1,7 +1,6 @@
 # Notes
 ## Problem_3.c
 
-* I used ```gets()``` in ```student_info()``` function which can through warnings. Let me know.
 * **You must run Problem_3.c and Provide 3 or more entries. Last entry should be your Name, ID, Course, Section. These information will be stored in my_file.txt**
 
 ## Problem_5.c
