@@ -12,18 +12,24 @@ info S[100];
 
 void student_info(struct info S[], int n)
 {
+    char temp;
+
     for(int i=0; i<n; i++){
         printf("\n\nName: ");
-        gets(S[i].Name);
+        scanf("%c", &temp);
+        scanf("%[^\n]s", &S[i].Name);
 
         printf("ID: ");
-        gets(S[i].ID);
+        scanf("%c", &temp);
+        scanf("%[^\n]s", &S[i].ID);
 
         printf("Course: ");
-        gets(S[i].Course);
+        scanf("%c", &temp);
+        scanf("%[^\n]s", &S[i].Course);
 
         printf("Section: ");
-        gets(S[i].Section);
+        scanf("%c", &temp);
+        scanf("%[^\n]s", &S[i].Section);
     }
 }
 
