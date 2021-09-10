@@ -18,5 +18,8 @@ int main()
     struct PlaneTicket Pt1 = {"Monir", "Bombay", 22000.25};
     struct PlaneTicket Pt2 = {"Sharmin", "Bangkok", 12500.75};
 
+    printf("Name: %s\nDestination: %s\nTicketPrice: %.2f\n\n", Pt1.Name, Pt1.Destination, Pt1.TicketPrice);
+    printf("Name: %s\nDestination: %s\nTicketPrice: %.2f\n", Pt2.Name, Pt2.Destination, Pt2.TicketPrice);
+
     return 0;
 }
