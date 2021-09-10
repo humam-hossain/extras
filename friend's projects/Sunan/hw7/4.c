@@ -7,7 +7,9 @@ int main()
 {
     int i;
     char str[1000];
+    char temp;
 
+    printf("Please enter string: ");
     scanf("%[^\n]s",&str);
 
     for(i=0; i < strlen(str); i++){
@@ -16,7 +18,7 @@ int main()
         }
     }
 
-    printf("%s", str);
+    printf("Modified String: %s", str);
 
     return 0;
 }
