@@ -35,6 +35,27 @@ void HighestGPA(struct Student std[]){
 int main()
 {
     struct Student std[100];
+    char temp;
+
+    for(int i=0; i<100; i++){
+        printf("StudentID: ");
+        scanf("%d", &std[i].StudentID);
+        
+        printf("Name: ");
+        scanf("%c", &temp);
+        scanf("%[^\n]s", &std[i].Name);
+
+        printf("CGPA: ");
+        scanf("%f", &std[i].CGPA);
+
+        printf("Major: ");
+        scanf("%c", &temp);
+        scanf("%[^\n]s", &std[i].Major);
+        
+        printf("\n");
+    }
+
+    HighestGPA(std);
 
     return 0;
 }
