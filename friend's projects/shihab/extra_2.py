@@ -41,11 +41,15 @@
 # B has sons M and N but none of them have sons. So no grandsons for B.
 
 def grandchilds(family, grandfather):
-    sons = family[grandfather]
     grandchilds = list()
     
-    for son in sons:
-        grandchilds = g
+    for sons in family[grandfather]:
+        try:
+            for son in sons:
+                grandchilds.append(grandchild)
+        except:
+            print("", end="")
+    print(grandchilds)
         
 
 family = {"A":["X", "Y", "Z"], "B":["M", "N"], "W":["A", "B"], "X":["E", "F", "G"]}
