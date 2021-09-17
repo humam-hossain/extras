@@ -28,22 +28,20 @@ int main()
                     Z[i][j] = 400;
                 }
             }
-
-            if(j==1 && i==1){
-                printf("enter number for move up(1), down(2), left(3), right(4): ");
-                scanf("%d", &move);
-
-                if(move == 1){
-                    Z[0][1] = -1;
-                }else if(move == 2){
-                    Z[2][1] = -1;
-                }else if(move == 3){
-                    Z[1][0] = -1;
-                }else if(move == 4){
-                    Z[1][2] = -1;
-                }
-            }
         }
+    }
+
+    printf("enter number for move up(1), down(2), left(3), right(4): ");
+    scanf("%d", &move);
+
+    if(move == 1){
+        Z[0][1] = -1;
+    }else if(move == 2){
+        Z[2][1] = -1;
+    }else if(move == 3){
+        Z[1][0] = -1;
+    }else if(move == 4){
+        Z[1][2] = -1;
     }
 
     for(int i=0; i<7; i++){
