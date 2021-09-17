@@ -52,3 +52,25 @@
 # 85 + (3*3) = 94.
 # Therefore, CGPA = (33.0 + 3.25 X 85) / 94 = 3.2898936170212765
 #   =======================================================
+
+
+current_sem_data = {"John":[4.0,3.7,4.0], "Tom":[3.3,3.7,4.0], "Harry":[3.3,3.7,4.0]}
+previous_sem_data = {"John":[3.88,90], "Tom":[3.52, 70], "Harry":[3.25,85]}
+
+name = input()
+
+print(f"Previous semester's completed credits: {previous_sem_data[name][1]}")
+print(f"Previous semester's CGPA: {previous_sem_data[name][0]}")
+
+total_credits_completed = previous_sem_data[name][1] + len(current_sem_data[name]) * 3
+print(f"Total Credits completed including current semester: {total_credits_completed}")
+
+current_total_gpa = 0
+
+for i in range(0, len(current_sem_data[name])):
+    current_total_gpa = current_total_gpa + current_sem_data[name][i] * 3
+
+print(f"Current semester's total GPA: {current_total_gpa}")
+
+cgpa = (current_total_gpa + previous_sem_data[name][0] * previous_sem_data[name][1])/total_credits_completed
+print(f"Current semester's CGPA: {cgpa}")
