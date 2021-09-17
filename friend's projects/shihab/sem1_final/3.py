@@ -25,3 +25,26 @@
 # ##A***A
 # ###A***A
 # ####AAAAA
+
+def function_name(num):
+    for i in range(num, 2*num):
+        if i == num:
+            for j in range(0, i):
+                    print("A", end="")
+        else:
+            for j in range(0, i-num):
+                print("#",end="")
+            print("A",end="")
+            for j in range(0, num - 2):
+                if i == (2*num - 1):
+                    print("A", end="")
+                else:
+                    print("*",end="")
+            print("A",end="")
+        print()
+
+function_name(4)
+print()
+function_name(3)
+print()
+function_name(5)
