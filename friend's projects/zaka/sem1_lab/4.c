@@ -58,19 +58,23 @@ struct Product b_product(struct Product parr[])
 int main()
 {
     struct Product parr[5];
+    char temp;
 
     for(int i=0; i<5; i++){
         printf("\n\nProduct Name: ");
+        if(i != 0){
+            scanf("%c", &temp);
+        }
         gets(parr[i].pName);
 
         printf("Quantity: ");
-        gets(parr[i].quantity);
+        scanf("%d", &parr[i].quantity);
 
         printf("Cost Price: ");
-        gets(parr[i].cost_price);
+        scanf("%f", &parr[i].cost_price);
 
         printf("Selling Price: ");
-        gets(parr[i].selling_price);
+        scanf("%f", &parr[i].selling_price);
     }
 
     return 0;
