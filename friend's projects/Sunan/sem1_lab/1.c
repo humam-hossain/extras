@@ -2,11 +2,17 @@
 
 void arrayDiv(int arr[] , int size)
 {
-    for(int i=0; i<size; i++){
-        for(int j=0; j<size; j++){
+    int i,j;
+
+    for(i=0; i<size; i++){
+        for(j=0; j<size; j++){
             if(arr[i] % arr[j] != 0){
                 break;
             }
+        }
+        if(j == size){
+            printf("%d", arr[i]);
+            break;
         }
     }
 }
