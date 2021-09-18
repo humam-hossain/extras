@@ -15,4 +15,6 @@ int main()
     nextTerm = t1 + t2;
     }
     printf("%d", t2);
+
+    return 0;
 }
