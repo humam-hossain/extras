@@ -2,58 +2,95 @@
 
 int main()
 {
-    int calender[12][31] = {
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30},
-        {},
-        {},
-        {}
+    int calender[12][5][7] = {
+        {
+            {},{},{},{},{}
+        },
+        {
+            {},{},{},{},{}
+        },
+        {
+            {},{},{},{},{}
+        },
+        {
+            {},{},{},{},{}
+        },
+        {
+            {},{},{},{},{}
+        },
+        {
+            {},{},{},{},{}
+        },
+        {
+            {},{},{},{},{}
+        },
+        {
+            {},{},{},{},{}
+        },
+        {
+            {1,2,3,4,5,6,7},{8,9,10,11,12,13,14},{15,16,17,18,19,20,21},{22,23,24,25,26,27,28},{29,30}
+        },
+        {
+            {},{},{},{},{}
+        },
+        {
+            {},{},{},{},{}
+        },
+        {
+            {},{},{},{},{}
+        }
     };
 
     for(int i=0; i<12; i++){
-        if(i == 0){
-            printf("January\n");
-        }else if(i == 1){
-            printf("February\n");
-        }else if(i == 2){
-            printf("March\n");
-        }else if(i == 3){
-            printf("April\n");
-        }else if(i == 4){
-            printf("May\n");
-        }else if(i == 5){
-            printf("June\n");
-        }else if(i == 6){
-            printf("July\n");
-        }else if(i == 7){
-            printf("August\n");
-        }else if(i == 8){
-            printf("September\n");
-        }else if(i == 9){
-            printf("October\n");
-        }else if(i == 10){
-            printf("November\n");
-        }else if(i == 11){
-            printf("December\n");
-        } 
-
-        for(int j=0; j<31; j++){
-            // calender[i][j] = j+1;
-            printf("%d ", calender[i][j]);
-            if(i==1 && j==27){
+        switch(i){
+            case 0:
+                printf("January\n");
                 break;
-            }
-            if(i == 3 || i==5 || i==8 || i==10){
-                if(j==29){
+            case 1:
+                printf("February\n");
+                break;
+            case 2:
+                printf("March\n");
+                break;
+            case 3:
+                printf("April\n");
+                break;
+            case 4:
+                printf("May\n");
+                break;
+            case 5:
+                printf("June\n");
+                break;
+            case 6:
+                printf("July\n");
+                break;
+            case 7:
+                printf("August\n");
+                break;
+            case 8:
+                printf("September\n");
+                break;
+            case 9:
+                printf("October\n");
+                break;
+            case 10:
+                printf("November\n");
+                break;
+            case 11:
+                printf("December\n");
+                break;
+            default:
+                break;
+        }
+
+        for(int j=0; j<6; j++){
+            switch (j){
+                case 0:
+                    printf("Sun ");
                     break;
-                }
+                
+                default:
+                    break;
             }
         }
         
