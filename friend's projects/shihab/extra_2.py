@@ -46,12 +46,20 @@ def grandchilds(family, grandfather):
     for sons in family[grandfather]:
         try:
             for son in sons:
-                grandchilds.append(grandchild)
+                for grandchild in family[son]:
+                    grandchilds.append(grandchild)
         except:
-            print("", end="")
-    print(grandchilds)
-        
+            continue
 
+    if len(grandchilds) > 0:
+        for i, grandchild in enumerate(grandchilds):
+            if grandchilds[i] == grandchilds[-1]:
+                print(f"and {grandchild}")
+            else:
+                print(grandchild, end=", ")
+    else:
+        print("Get your sons married first! Wanna_be_grandpa!!")
+       
 family = {"A":["X", "Y", "Z"], "B":["M", "N"], "W":["A", "B"], "X":["E", "F", "G"]}
 
 grandfather = input()
