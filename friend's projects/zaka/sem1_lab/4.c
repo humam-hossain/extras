@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <string.h>
 
+int n;
+
 struct Product
 {
     char pName[100];
@@ -40,7 +42,7 @@ struct Product b_product(struct Product parr[])
     float best_profit = parr[0].quantity * (parr[0].selling_price - parr[0].cost_price);
     int best_i=0;
 
-    for(int i=1; i<5; i++){
+    for(int i=1; i<n; i++){
         if(best_profit < (parr[i].quantity * (parr[i].selling_price - parr[i].cost_price))){
             best_profit = parr[i].quantity * (parr[i].selling_price - parr[i].cost_price);
             best_i = i;
@@ -57,10 +59,13 @@ struct Product b_product(struct Product parr[])
 
 int main()
 {
-    struct Product parr[5];
     char temp;
+    scanf("%d", &n);
+    scanf("%c", &temp);
+    struct Product parr[n];
 
-    for(int i=0; i<5; i++){
+
+    for(int i=0; i<n; i++){
         printf("\n\nProduct Name: ");
         if(i != 0){
             scanf("%c", &temp);
@@ -77,5 +82,7 @@ int main()
         scanf("%f", &parr[i].selling_price);
     }
 
+    printf("%s", b_product(parr).pName);
+    
     return 0;
 }
