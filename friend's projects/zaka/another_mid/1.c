@@ -1,28 +1,33 @@
 #include <stdio.h>
 
+
+int sum_digits(int num)
+{
+    int sum=0;
+
+    while(num != 0){
+        sum += num % 10;
+        num = num / 10;
+    }
+
+    return sum;
+}
+
 int main()
 {
-    int n,i=0,count=0;
-    char string[1000];
-    char result[100];
+    int num;
 
-    scanf("%s", string);
+    printf("Enter a positive (or) to terminate):");
+    scanf("%d", &num);
 
-    for(i=1; string[i] !='\0'; i = i+2){
-        if(string[i] < 'l'){
-            result[count] = string[i];
-            count++;
-        }
+    if(num < 0){
+        printf("Error: %d is a negative number\n\n");
+    }else if(num == 0){
+        printf("Program Terminated");
+        return 0;
+    }else{
+        printf("The sum of the digits for %d is %d", num, sum_digits(num));
     }
 
-    printf("[");
-    for(i=0; i<count; i++){
-        printf("%c", result[i]);
-        if(i != count-1){
-            printf(",");
-        }
-    }
-    printf("]");
-
-    return 0;    
+    return main;
 }
