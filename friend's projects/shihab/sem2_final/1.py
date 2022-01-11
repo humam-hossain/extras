@@ -14,3 +14,34 @@
 # 1431, 69716, 353, 7969828
 # Sample Output 2:
 # {'Magic': (), 'Normal': (1431, 69716, 353, 7969828)}
+
+def mySum(nums):
+    total = 0
+    for num in nums:
+        total += num
+    return total
+
+def properDivisors(num):
+    divisors = []
+    for i in range(1, num):
+        if num % i == 0:
+            divisors.append(i)
+    return divisors
+
+perfect_numbers = []
+imperfect_numbers = []
+
+while True:
+    user_input = input('Enter a number or \'stop\' to exit: ')
+    
+    if user_input.casefold() == 'stop':
+        break
+    
+    if mySum(properDivisors(int(user_input))) == int(user_input):
+        perfect_numbers.append(int(user_input))
+    else:
+        imperfect_numbers.append(int(user_input))
+    
+    # Print after appending
+    print({'Perfect': perfect_numbers, 'Imperfect': imperfect_numbers})
+    print('===***===')

@@ -73,64 +73,67 @@ Total passenger: 2
 CoxBazar: Mike, David
 """
 
+### Mahfuz
+def comma_sep_str(my_list):
+    return ', '.join(my_list)
+
 class Bus:
-
-    def __init__(self, name, destinationDict):
+    total_sold = 0
+    total_passenger = 0
+    chittagong_passengers = []
+    coxBazar_passengers = []
+    cumilla_passengers = []    
+    
+    def __init__(self, name, ticketAmounts):
         self.name = name
-        self.destinationDict = destinationDict
-        self.passengers = []
-        self.soldTicket = 0
-
-    def addPassenger(self, *args):
-        for arg in args:
-            if arg.destination in self.destinationDict:
-                print(arg.name + " get into the bus")
-                self.passengers.append(arg)
+        self.ticketAmounts = ticketAmounts
+        
+    def addPassenger(self, *passengerObjects):
+        for passengerObj in passengerObjects:
+            if passengerObj.destination == 'Chittagong':
+                self.total_sold += self.ticketAmounts[passengerObj.destination]
+                self.total_passenger += 1
+                self.chittagong_passengers.append(passengerObj.name)
+            elif passengerObj.destination == 'Cumilla':
+                self.total_sold += self.ticketAmounts[passengerObj.destination]
+                self.total_passenger += 1
+                self.cumilla_passengers.append(passengerObj.name)
+            elif passengerObj.destination == 'CoxBazar':
+                self.total_sold += self.ticketAmounts[passengerObj.destination]
+                self.total_passenger += 1
+                self.coxBazar_passengers.append(passengerObj.name)
             else:
-                print("Sorry " + arg.name +
-                      ", the bus won’t go to " + arg.destination)
-
-    def showDetail(self):
-
-        soldTicket = 0
-        for passenger in self.passengers:
-            soldTicket += self.destinationDict[passenger.destination]
-        totalPassenger = len(self.passengers)
-        destinations = []
-        for destination in self.destinationDict:
-            destinations.append(destination)
-        if(soldTicket > self.soldTicket):
-            self.soldTicket = soldTicket
-        print("Total ticket sell: " + str(self.soldTicket) + " Taka")
-        print("Total passenger: " + str(totalPassenger))
-        dictOfDestinations = {}
-        for destinationX in destinations:
-            dictOfDestinations[destinationX] = []
-            for passenger in self.passengers:
-                if passenger.destination == destinationX:
-                    dictOfDestinations[destinationX].append(passenger.name)
-        for elem in dictOfDestinations:
-            if(dictOfDestinations[elem]):
-                print(elem + ": " + ', '.join(dictOfDestinations[elem]))
-
+                print(f'Sorry {passengerObj.name}, the bus won’t go to {passengerObj.destination}')
+                #raise ValueError(f'Destination of {passengerObj.name} must be exact Chittagong, Cumilla or CoxBazar')
+        
     def dropPassesger(self, destination):
-        removable = []
-        for passenger in self.passengers:
-            if passenger.destination == destination:
-                # self.passengers.remove(passenger)
-                removable.append(passenger)
-        print("All passengers of " + destination + " are dropped")
-        for removablepassenger in removable:
-            self.passengers.remove(removablepassenger)
-
-
+        if destination == 'Chittagong':
+            print('All passengers of Chittagong are dropped')
+        elif destination == 'Cumilla':
+            print('All passengers of Cumilla are dropped')
+        elif destination == 'CoxBazar':
+            print('All passengers of CoxBazar are dropped')
+        else:
+            raise ValueError('Value must be exact Chittagong, Cumilla or CoxBazar')
+    
+    def showDetail(self):
+        chittagong = f'Chittagong: {comma_sep_str(self.chittagong_passengers)} \n'
+        coxBazar = f'CoxBazar: {comma_sep_str(self.coxBazar_passengers)} \n'
+        cumilla = f'Cumilla: {comma_sep_str(self.cumilla_passengers)}'
+        print(f'Total ticket sell: {self.total_sold} Taka \n\
+Total passenger: {self.total_passenger} \n\
+{chittagong}\
+{coxBazar}\
+{cumilla}', end='')
+    
+    
 class Passenger:
     def __init__(self, name, destination):
         self.name = name
         self.destination = destination
+        
+b = Bus("Volvo", {"Chittagong": 1200,"Cumilla": 700,"CoxBazar": 1500})
 
-
-b = Bus("Volvo", {"Chittagong": 1200, "Cumilla": 700, "CoxBazar": 1500})
 p1 = Passenger("Bob", "Chittagong")
 print("1=============================")
 b.addPassenger(p1)
@@ -158,3 +161,5 @@ print("10=============================")
 b.dropPassesger("Chittagong")
 print("11============================")
 b.showDetail()
+
+###
