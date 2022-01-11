@@ -94,7 +94,7 @@ Total student(s): {len(students)}\n\
         for i in range(0, len(students), 2):
             get_student_name = students[i]
 
-            # For generating student id
+            # Generating student id
             admission_year = students[i+1].split('-')[1]
 
             semester_id = 0
@@ -110,24 +110,28 @@ Total student(s): {len(students)}\n\
             student_serial = self.__getStudentCount()
             self.__setStudentCount(student_serial + 1)
 
-            Department.studentCount += 1
-
             get_student_id = admission_year[-2:] + str(semester_id) + str(
                 self.dept_code) + str(student_serial).zfill(3)
 
-            # Push students
+            # Push students \w generated student id
             self.students.append({
                 'id': get_student_id,
                 'name': get_student_name,
                 'dept': self.__getClassName()
             })
 
+            # For getting studentCount \w base class
+            Department.studentCount += 1
+
         # Department.students = self.students
         print("Student ID generated and all students added")
 
-        # Set students
+        # Set students to child class
         self.__setattr__('students', list(
             filter(lambda obj: obj['dept'] == self.__getClassName(), self.students)))
+
+        # For getting all students \w base class
+        Department.students += self.students
 
 
 class CSEDepartment(Department):
@@ -166,7 +170,7 @@ print("6=================================")
 print("Total Number of Students:", Department.studentCount)
 
 print('==Extra==')
-print('>>>Department.students:', Department.students, len(Department.students))
+print('Department.students:', Department.students, len(Department.students))
 print('Department.studentCount:', Department.studentCount)
 print('c1.students:', c1.students, len(c1.students))
 print('c1.studentCount:', c1.studentCount)
