@@ -1,7 +1,21 @@
-x= ("Dhaka Abdur Rahim", "Dhaka John Cena", "Narayanganj JohnWick", "Comilla CM Punk")
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 
-print(x[0])
+for _ in range(int(input())):
+    a = []
+    b = []
+    
+    input()
+    a = input().split()
+    input()
+    b = input().split()
 
-# Output:
-# {'Dhaka': ['Dhaka Abdur Rahim', 'Dhaka John Cena'], 'Narayanganj':
-# ['Narayanganj John Wick'], 'Comilla': ['Comilla CM Punk']}
+    result = True
+
+    for i in a:
+        if i not in b:
+            result = False
+    if result == True:
+        print(True)
+    else:
+        print(False)
+    
