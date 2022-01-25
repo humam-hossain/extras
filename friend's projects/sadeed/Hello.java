@@ -1,23 +1,19 @@
-import java.util.Scanner;
+class Methods{
 
+    String animal;
+    int value;
+
+    void run(){
+        System.out.println("Running");
+        System.out.println("My " + animal + " is " + value + " years old.");
+    }
+}
 public class Hello{
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        //Variable types supported by swith statements :char , byte , short , int and String
-        System.out.println("Enter your instructions: ");
-        String text = input.nextLine();
+        Methods name = new Methods();
 
-        switch(text) {
-        case "run": 
-            System.out.println("Program is running");
-            break;
-        case "stop":
-            System.out.println("Program stopped");
-            break;
-        default: 
-             System.out.println("Instruction not recognized");
-        
-
+        name.animal = "Cat";
+        name.value = 9;
+        name.run();
     }
- }
 }
