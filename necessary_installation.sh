@@ -5,6 +5,6 @@ echo "Chromium Browser"
 sudo apt-get install chromium -y
 echo 
 echo "GIT"
-sudo apt-get install git
+sudo apt-get install git -y
 echo
 echo

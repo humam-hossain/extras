@@ -14,6 +14,15 @@
 ```bash
 dpkg -r packagename.deb #uninstalling
 ```
+
+### Installation of .tar packages
+
+```bash
+tar xvfz package_name.tar.gz
+cd pakage_name
+
+```
+
 ### Fixing broken installation
 ```bash
 apt --fix-broken install
