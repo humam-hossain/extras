@@ -18,10 +18,11 @@ dpkg -r packagename.deb #uninstalling
 ### Installation of .tar packages
 
 ```bash
-tar xvfz package_name.tar.gz
-cd pakage_name
-
+sudo tar xvfz package_name.tar.gz -C /opt 
 ```
+ctrl + space (ulauncher)
+search main menu
+
 
 ### Fixing broken installation
 ```bash
