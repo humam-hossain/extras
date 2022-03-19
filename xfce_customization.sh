@@ -3,7 +3,6 @@
 #  
 # Youtube video : https://www.youtube.com/watch?v=TAWwJoYWq6s
 
-
 # initial setup
 # dconf and gsettings
 
