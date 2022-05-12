@@ -1,0 +1,2 @@
+You can also remove PPAs by deleting the .list files from /etc/apt/sources.list.d directory.
+rm whatever.list
