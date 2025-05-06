@@ -925,8 +925,21 @@
 
 ##############[ taskwarrior: taskwarrior task count (https://taskwarrior.org/) ]##############
   # Taskwarrior color.
+  # typeset -g POWERLEVEL9K_TASKWARRIOR_BACKGROUND=6
+
+  _p9k_taskwarrior_custom_display() {
+    # Get counts using taskwarrior commands
+    local overdue=$(task +OVERDUE 'due.before:today' count 2>/dev/null || echo 0)
+    local pending=$(task +PENDING count 2>/dev/null || echo 0)
+    local completed=$(task status:completed end:today count 2>/dev/null || echo 0)
+    local today=$(( pending + completed ))
+    
+    # Format: ?OVERDUE !PENDING / TODAY
+    echo "?${overdue} !${pending} ${completed}/${today}"
+  }
+
+  typeset -g POWERLEVEL9K_TASKWARRIOR_CONTENT_EXPANSION='$(_p9k_taskwarrior_custom_display)'
   typeset -g POWERLEVEL9K_TASKWARRIOR_FOREGROUND=0
-  typeset -g POWERLEVEL9K_TASKWARRIOR_BACKGROUND=6
 
   # Taskwarrior segment format. The following parameters are available within the expansion.
   #
@@ -937,15 +950,12 @@
   #
   # The default format:
   #
-  #   '${P9K_TASKWARRIOR_OVERDUE_COUNT:+"!$P9K_TASKWARRIOR_OVERDUE_COUNT/"}$P9K_TASKWARRIOR_PENDING_COUNT'
+  # '${P9K_TASKWARRIOR_OVERDUE_COUNT:+"!$P9K_TASKWARRIOR_OVERDUE_COUNT/"}$P9K_TASKWARRIOR_PENDING_COUNT'
   #
-  # typeset -g POWERLEVEL9K_TASKWARRIOR_CONTENT_EXPANSION='$P9K_TASKWARRIOR_PENDING_COUNT'
+  # typeset -g POWERLEVEL9K_TASKWARRIOR_CONTENT_EXPANSION='$P9K_TASKWARRIOR_OVERDUE_COUNT'
 
   # Custom icon.
   # typeset -g POWERLEVEL9K_TASKWARRIOR_VISUAL_IDENTIFIER_EXPANSION='⭐'
-
-give me proper setup for taskwarrior
-
 
   ######[ per_directory_history: Oh My Zsh per-directory-history local/global indicator ]#######
   # Color when using local/global history.
